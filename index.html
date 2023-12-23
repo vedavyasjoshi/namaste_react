@@ -20,8 +20,12 @@
         root.appendChild(heading);
     </script> -->
 
-    <!-- React, ReactDOM CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React, ReactDOM CDN 
+        React -> core react modules
+        ReactDOM -> to render the components on browsers, similar to other React Native, etc
+        Order of script tag matters...else it shows Ref error ("React not defined")
+    -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> 
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <script>
