@@ -11,7 +11,8 @@ class About extends React.Component {
     return (
       <div>
         <h2>This is About us page</h2>
-        <UserClass name={"Vedavyas"} />
+        <User />
+        {/* <UserClass name={"Vedavyas"} /> */}
       </div>
     );
   }

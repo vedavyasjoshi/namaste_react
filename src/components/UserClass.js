@@ -17,12 +17,19 @@ class UserClass extends React.Component {
     this.setState({ userInfo: json });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.count !== prevState.count) {
+      //do something
+    }
+    this.timer = setInterval(() => {
+      console.log("inside interval");
+    }, 1000);
     console.log("ComponentDidUpdate");
   }
 
   componentWillUnmount() {
     console.log("componentWillUnmount");
+    clearInterval(this.timer);
   }
 
   render() {

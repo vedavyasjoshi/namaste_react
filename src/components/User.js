@@ -1,4 +1,19 @@
-const User = ({name}) => {
+import { useEffect } from "react";
+
+const User = ({ name }) => {
+  useEffect(() => {
+    console.log("Inside useEffect");
+    const timer = setInterval(() => {
+      console.log("inside interval");
+    }, 1000);
+    return () => {
+      console.log("UseEffect return used for cleanup");
+      clearInterval(timer);
+    };
+  }, []);
+
+  console.log("Render");
+
   return (
     <div className="user-card">
       <h2>Name: {name}</h2>
