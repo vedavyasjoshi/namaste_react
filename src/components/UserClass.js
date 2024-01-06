@@ -4,22 +4,34 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      userInfo: {
+        login: "default",
+        public_repos: 0,
+      },
     };
   }
+
+  async componentDidMount() {
+    const data = await fetch("https://api.github.com/users/vedavyasjoshi");
+    const json = await data.json();
+    this.setState({ userInfo: json });
+  }
+
+  componentDidUpdate() {
+    console.log("ComponentDidUpdate");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
+  }
+
   render() {
+    const { login, public_repos, avatar_url } = this.state.userInfo;
     return (
       <div className="user-card">
-        <h1>{this.state.count}</h1>
-        <button
-          onClick={() => {
-            this.setState({count: this.state.count + 1 });
-          }}
-        >
-          Increment
-        </button>
-        <h2>Name: {this.props.name}</h2>
-        <h3>Location: Bangalore</h3>
+        <h2>Name: {login}</h2>
+        <h3>Repos: {public_repos}</h3>
+        <img className="user-img" src={avatar_url} alt="avatar" />
         <h4>Contact: @vedavyasjoshi121</h4>
       </div>
     );

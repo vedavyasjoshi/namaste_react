@@ -61,3 +61,7 @@
     padding: 10px;
     border: 1px solid black;
 }
+.user-img {
+    height: 100px;
+    width: 100px;
+}

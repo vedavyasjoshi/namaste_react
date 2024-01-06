@@ -7,13 +7,13 @@ class About extends React.Component {
     super(props);
   }
 
-  
-
   render() {
-    <div>
-      <h2>This is About us page</h2>
-      <UserClass name={"Vedavyas"} />
-    </div>;
+    return (
+      <div>
+        <h2>This is About us page</h2>
+        <UserClass name={"Vedavyas"} />
+      </div>
+    );
   }
 }
 
