@@ -15,7 +15,7 @@ const User = ({ name }) => {
   console.log("Render");
 
   return (
-    <div className="user-card">
+    <div>
       <h2>Name: {name}</h2>
       <h3>Location: Bangalore</h3>
       <h4>Contact: @vedavyasjoshi121</h4>
