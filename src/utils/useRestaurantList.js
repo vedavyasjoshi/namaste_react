@@ -14,8 +14,8 @@ const useRestaurantList = (resId) => {
     );
     const json = await data.json();
     setListOfRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );    
   };
 
   return listOfRestaurants;
