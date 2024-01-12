@@ -1,10 +1,8 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
 
-const CategoryItems = ({ category }) => {
-  const [showItems, setShowItems] = useState(false);
+const CategoryItems = ({ category, showItems, setShowItems }) => {
   const handleClick = () => {
-    setShowItems(!showItems);
+    setShowItems();
   };
   return (
     <div onClick={handleClick} className="cursor-pointer my-8">
