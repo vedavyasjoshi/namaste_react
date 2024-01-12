@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { RES_MENU_URL } from "./constants";
 
 const useRestaurantList = (resId) => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
