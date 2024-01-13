@@ -17,3 +17,13 @@ This is my notes for Namaste React!
  *  - Address
  *  - Contact
  */
+
+ # Redux
+ /**
+  * Install @reduxjs/toolkit, react-redux
+  * Build store
+  * Connect app to store
+  * Create slices in store
+  * dispatch action
+  * selector
+ */
