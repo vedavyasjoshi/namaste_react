@@ -27,3 +27,23 @@ This is my notes for Namaste React!
   * dispatch action
   * selector
  */
+
+  # Types of dev testing
+  /**
+   * Unit testing
+   * Integration testing
+   * End to End e2e testing
+  */
+
+  # Setup of RTL
+  /**
+    * Install RTl
+    * Install Jest
+    * Install Babel dep
+    * Configure Babel
+    * Configure parcel to disable default transpilation
+    * Jest configuration
+    * Install Jsdom
+    * Install @babel/preset-react - to make jsx work in test cases
+    * Install @testing-library/jest-dom
+  */
