@@ -35,6 +35,7 @@ const Body = () => {
         <div className="m-4 p-4">
           <input
             type="text"
+            data-testid="searchInput"
             className="border border-solid border-black"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
@@ -56,12 +57,12 @@ const Body = () => {
             className="px-4 py-2 bg-gray-100 rounded-lg"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4
+                (res) => res.info.avgRating >= 4.5
               );
               setFilteredListOfRestaurants(filteredList);
             }}
           >
-            Top Rated Restaurant
+            Top Rated Restaurants
           </button>
         </div>
         <div className="m-4 p-4 flex items-center">
@@ -78,7 +79,7 @@ const Body = () => {
       <div className="flex flex-wrap">
         {filteredListOfRestaurants.map((res) => (
           <Link to={"/restaurants/" + res.info.id} key={res.info.id}>
-            {res.info.avgRating > 4.2 ? (
+            {res.info.totalRatingsString === "10K+" ? (
               <RestaurantCardPromoted resData={res} />
             ) : (
               <RestaurantCard resData={res} />
